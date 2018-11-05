@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>Movies and Box Office Performances</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
+    <style>
+      body{
+        padding-top: 50px;
+      }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixes-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed"
+        data-toggle="collapse" data-target="~navbar" aria-expanded="false"
+        aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Movies</a>
+        </div>
+           <div id="navbar" class="collapse navbar-collapse">
+           <ul class="nav navbar-nav">
+             <li class="active"><a href="#">Home Page</a></li>
+             <li><a href="#africa">Highest Grossing Movies</a></li>
+             <li><a href="#asia">Box Office Performances</a></li>
+             <li><a href="#america">Coming in 2019</a></li>
+            </ul>
+            </div>
+         </div>
+       </nav>
+
+        <div class="container">
+             <h1>Big Cats of Planet Earth</h1>
+             <h2>Are you a fan of Lewis, Tigers and other Big Cats? Then this is the site for you.</h2>
+             <p class="lead">There are 7 main Big Cats around ther world, they are found on the continents of Africa, Asia and America.</p>
+             <p class="lead">Big Cats are 1 of the 2 great tribes of carnivoeres, the other being Wild Dogs. They are all apex predators in their range.</p>
+             <p class="lead">This site will allow ou to find out information on Lions, Tigers, Cheetahs, leopards, Jaguars, Snow Leopards and Pumas.</p>
+             <img src="{{ url_for('static', filename='img/7cats.JPG') }}">
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>
+
