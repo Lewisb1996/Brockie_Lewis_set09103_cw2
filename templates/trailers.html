@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Movies and Box Office Performances</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
+    <style>
+      body{
+        padding-top: 50px;
+      }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixes-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed"
+        data-toggle="collapse" data-target="~navbar" aria-expanded="false"
+        aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Movies</a>
+        </div>
+           <div id="navbar" class="collapse navbar-collapse">
+           <ul class="nav navbar-nav">
+             <li><a href="/">Home Page</a></li>
+             <li><a href="africa">Highest Grossing Movies</a></li>
+             <li><a href="asia">Box Office Performances</a></li>
+             <li><a href="comingsoon">Coming in 2019</a></li>
+             <li class="active"><a href="comingsoon/trailers">Trailers</a></li>
+            </ul>
+            </div>
+         </div>
+       </nav>
+
+        <div class="container">
+             <h1>2019 Movie Trailers</h1>
+             <p class="lead"> </p>
+             <div class="panel-body">
+        	<iframe width="550" height="315" src="https://www.youtube.com/embed/11K013qpRR4" frameborder="0"></iframe>
+		<iframe width="550" height="315" src="https://www.youtube.com/embed/naW9U8MiUY0" frameborder="0"></iframe>
+                <iframe width="550" height="315" src="https://www.youtube.com/embed/moY78qMJuxM" frameborder="0"></iframe>
+                <iframe width="550" height="315" src="https://www.youtube.com/embed/hfpjs1Fj-Dc" frameborder="0"></iframe>
+	     </div>
+   
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>
+
