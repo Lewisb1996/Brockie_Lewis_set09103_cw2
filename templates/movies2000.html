@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Highest Grosing Movies</title>
+    <title>Highest Grossing Animated Movies</title>
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
     <style>
@@ -34,12 +34,13 @@
            <div id="navbar" class="collapse navbar-collapse">
            <ul class="nav navbar-nav">
              <li><a href="/">Home Page</a></li>
-             <li class="active"><a href="highestgrossing">Highest Grossing Movies</a></li>
-             </li>
+             <li><a href="highestgrossing">Highest Grossing Movies</a></li>
+             <li><a href="animated">Highest Grossing Animated  Movies</a></li>
+              </li>
              <li class="nav-item dropdown">
                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role=button" aria-haspopup="true" aria-expanded="false">By Years</a>
                <div class="dropdown-menu" id="drop-item">
-                  <a class="dropdown-item" href="movies2000">2000</a>
+                  <a class="dropdown-item" class="active" href="2000">2000</a>
                   <a class="dropdown-item" href="2001">2001</a>
                   <a class="dropdown-item" href="2002">2002</a>
                   <a class="dropdown-item" href="2003">2003</a>
@@ -67,12 +68,11 @@
        </nav>
 
         <div class="container">
-             <h1>Highest Grossing Movies of All Time</h1>
+             <h1>Highest Grossing Movies of 2000</h1>
              <table border = 1>
                <thead>
                <td>Rank</td>
                <td>Title</td>
-               <td>Year</td>
                <td>Worldwide Gross</td>
                </thead>
          
@@ -80,7 +80,6 @@
                <tr>
                 <td>{{row["rank"]}}</td>
                 <td>{{row["title"]}}</td>
-                <td>{{row["release_year"]}}</td>
                 <td>{{row["grossing"]}}</td>	
                </tr>
                {% endfor %}

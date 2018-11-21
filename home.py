@@ -29,6 +29,28 @@ def animated():
    rows = cur.fetchall();
    return render_template("animated.html",rows = rows)
 
+@app.route('/movies2000')
+def movies2000():
+   con = sql.connect("var/movies2000.db")
+   con.row_factory = sql.Row
+
+   cur = con.cursor()
+   cur.execute("select * from movies2000")
+
+   rows = cur.fetchall();
+   return render_template("movies2000.html",rows = rows)
+
+@app.route('/movies2001')
+def movies2001():
+   con = sql.connect("var/movies2001.db")
+   con.row_factory = sql.Row
+
+   cur = con.cursor()
+   cur.execute("select * from movies2001")
+
+   rows = cur.fetchall();
+   return render_template("movies2001.html",rows = rows)
+
 
 @app.route('/comingsoon/<string:name>')
 def comingsoon(name):

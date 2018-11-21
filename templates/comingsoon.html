@@ -2,9 +2,19 @@
 <head>
     <title>Coming Soon</title>
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
+     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
     <style>
       body{
         padding-top: 50px;
+      }
+
+      #drop-item {
+        background: #222;
+      }
+
+      #drop-item a {
+        padding: 5px;
+        color: #f8f8f8;
       }
     </style>
 </head>
@@ -26,7 +36,31 @@
            <ul class="nav navbar-nav">
              <li><a href="/">Home Page</a></li>
              <li><a href="africa">Highest Grossing Movies</a></li>
-             <li><a href="asia">Box Office Performances</a></li>
+             </li>
+             <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role=button" aria-haspopup="true" aria-expanded="false">By Years</a>
+               <div class="dropdown-menu" id="drop-item">
+                  <a class="dropdown-item" href="2000">2000</a>
+                  <a class="dropdown-item" href="2001">2001</a>
+                  <a class="dropdown-item" href="2002">2002</a>
+                  <a class="dropdown-item" href="2003">2003</a>
+                  <a class="dropdown-item" href="2004">2004</a>
+                  <a class="dropdown-item" href="2005">2005</a>
+                  <a class="dropdown-item" href="2006">2006</a>
+                  <a class="dropdown-item" href="2007">2007</a>
+                  <a class="dropdown-item" href="2008">2008</a>
+                  <a class="dropdown-item" href="2009">2009</a>
+                  <a class="dropdown-item" href="2010">2010</a>
+                  <a class="dropdown-item" href="2011">2011</a>
+                  <a class="dropdown-item" href="2012">2012</a>
+                  <a class="dropdown-item" href="2013">2013</a>
+                  <a class="dropdown-item" href="2014">2014</a>
+                  <a class="dropdown-item" href="2015">2015</a>
+                  <a class="dropdown-item" href="2016">2016</a>
+                  <a class="dropdown-item" href="2017">2017</a>
+                  <a class="dropdown-item" href="2018">2018</a>
+               </div>
+             </li>
              <li class="active"><a href="comingsoon">Coming in 2019</a></li>
              <li><a href="trailers">Trailers</a></li>
             </ul>
