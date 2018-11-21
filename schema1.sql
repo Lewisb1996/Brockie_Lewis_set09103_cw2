@@ -1,6 +1,6 @@
-DROP TABLE if EXISTS animated ;
+DROP TABLE if EXISTS animated;
 
-CREATE TABLE albums (
+CREATE TABLE animated (
     rank int,    
     title text,
     releae_year text,

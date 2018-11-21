@@ -18,6 +18,18 @@ def highestgrossing():
    rows = cur.fetchall();
    return render_template("highestgrossing.html",rows = rows)
 
+@app.route('/animated')
+def animated():
+   con = sql.connect("var/animated.db")
+   con.row_factory = sql.Row
+
+   cur = con.cursor()
+   cur.execute("select * from animated")
+
+   rows = cur.fetchall();
+   return render_template("animated.html",rows = rows)
+
+
 @app.route('/comingsoon/<string:name>')
 def comingsoon(name):
     #return name
