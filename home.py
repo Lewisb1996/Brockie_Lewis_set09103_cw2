@@ -51,6 +51,115 @@ def movies2001():
    rows = cur.fetchall();
    return render_template("movies2001.html",rows = rows)
 
+@app.route('/movies2002')
+def movies2002():
+   con = sql.connect("var/movies2002.db")
+   con.row_factory = sql.Row
+
+   cur = con.cursor()
+   cur.execute("select * from movies2002")
+
+   rows = cur.fetchall();
+   return render_template("movies2002.html",rows = rows)
+
+@app.route('/movies2003')
+def movies2003():
+   con = sql.connect("var/movies2003.db")
+   con.row_factory = sql.Row
+
+   cur = con.cursor()
+   cur.execute("select * from movies2003")
+
+   rows = cur.fetchall();
+   return render_template("movies2003.html",rows = rows)
+
+@app.route('/movies2004')
+def movies2004():
+   con = sql.connect("var/movies2004.db")
+   con.row_factory = sql.Row
+
+   cur = con.cursor()
+   cur.execute("select * from movies2004")
+
+   rows = cur.fetchall();
+   return render_template("movies2004.html",rows = rows)
+
+@app.route('/movies2005')
+def movies2005():
+   con = sql.connect("var/movies2005.db")
+   con.row_factory = sql.Row
+
+   cur = con.cursor()
+   cur.execute("select * from movies2005")
+
+   rows = cur.fetchall();
+   return render_template("movies2005.html",rows = rows)
+
+@app.route('/movies2006')
+def movies2006():
+   con = sql.connect("var/movies2006.db")
+   con.row_factory = sql.Row
+
+   cur = con.cursor()
+   cur.execute("select * from movies2006")
+
+   rows = cur.fetchall();
+   return render_template("movies2006.html",rows = rows)
+
+@app.route('/movies2007')
+def movies2007():
+   con = sql.connect("var/movies2007.db")
+   con.row_factory = sql.Row
+
+   cur = con.cursor()
+   cur.execute("select * from movies2007")
+
+   rows = cur.fetchall();
+   return render_template("movies2007.html",rows = rows)
+
+@app.route('/movies2008')
+def movies2008():
+   con = sql.connect("var/movies2008.db")
+   con.row_factory = sql.Row
+
+   cur = con.cursor()
+   cur.execute("select * from movies2008")
+
+   rows = cur.fetchall();
+   return render_template("movies2008.html",rows = rows)
+
+@app.route('/movies2009')
+def movies2009():
+   con = sql.connect("var/movies2009.db")
+   con.row_factory = sql.Row
+
+   cur = con.cursor()
+   cur.execute("select * from movies2009")
+
+   rows = cur.fetchall();
+   return render_template("movies2009.html",rows = rows)
+
+@app.route('/movies2010')
+def movies2010():
+   con = sql.connect("var/movies2010.db")
+   con.row_factory = sql.Row
+
+   cur = con.cursor()
+   cur.execute("select * from movies2010")
+
+   rows = cur.fetchall();
+   return render_template("movies2010.html",rows = rows)
+
+@app.route('/movies2012')
+def movies2011():
+   con = sql.connect("var/movies2012.db")
+   con.row_factory = sql.Row
+
+   cur = con.cursor()
+   cur.execute("select * from movies2012")
+
+   rows = cur.fetchall();
+   return render_template("movies2012.html",rows = rows)
 
 @app.route('/comingsoon/<string:name>')
 def comingsoon(name):

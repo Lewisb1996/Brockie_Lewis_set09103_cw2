@@ -3,7 +3,7 @@ import sqlite3
 
 from flask import Flask
 app = Flask ( __name__ )
-db_location = 'var/highestgrossing.db'
+db_location = 'var/.highestgrossing.db'
 
 def get_db () :
     db = getattr (g, 'db', None)

@@ -1,0 +1,93 @@
+<html>
+<head>
+    <title>Highest Grossing Movies</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+    <style>
+      body{
+        padding-top: 50px;
+      }
+      
+      td {
+        font-size: 30px;
+	padding-left:  10px;
+	padding-bottom: 10px;  
+        padding-right: 10px;
+      
+      }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixes-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed"
+        data-toggle="collapse" data-target="~navbar" aria-expanded="false"
+        aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+         <a class="navbar-brand" href="#">Movies</a>
+        </div>
+           <div id="navbar" class="collapse navbar-collapse">
+           <ul class="nav navbar-nav">
+             <li><a href="/">Home Page</a></li>
+             <li><a href="highestgrossing">Highest Grossing Movies</a></li>
+             <li><a href="animated">Highest Grossing Animated  Movies</a></li>
+              </li>
+             <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role=button" aria-haspopup="true" aria-expanded="false">By Years</a>
+               <div class="dropdown-menu" id="drop-item">
+                  <a class="dropdown-item" href="movies2000">2000</a>
+                  <a class="dropdown-item" href="movies2001">2001</a>
+                  <a class="dropdown-item" href="movies2002">2002</a>
+                  <a class="dropdown-item" href="movies2003">2003</a>
+                  <a class="dropdown-item" href="movies2004">2004</a>
+                  <a class="dropdown-item" href="movies2005">2005</a>
+                  <a class="dropdown-item" href="movies2006">2006</a>
+                  <a class="dropdown-item" href="movies2007">2007</a>
+                  <a class="dropdown-item" href="movies2008">2008</a>
+                  <a class="dropdown-item" class="active" href="movies2009">2009</a>
+                  <a class="dropdown-item" href="2010">2010</a>
+                  <a class="dropdown-item" href="2011">2011</a>
+                  <a class="dropdown-item" href="2012">2012</a>
+                  <a class="dropdown-item" href="2013">2013</a>
+                  <a class="dropdown-item" href="2014">2014</a>
+                  <a class="dropdown-item" href="2015">2015</a>
+                  <a class="dropdown-item" href="2016">2016</a>
+                  <a class="dropdown-item" href="2017">2017</a>
+                  <a class="dropdown-item" href="2018">2018</a>
+               </div>
+             </li>
+             <li><a href="comingsoon">Coming in 2019</a></li>
+            </ul>
+            </div>
+         </div>
+       </nav>
+
+        <div class="container">
+             <h1>Highest Grossing Movies of 2009</h1>
+             <table border = 1>
+               <thead>
+               <td>Rank</td>
+               <td>Title</td>
+               <td>Worldwide Gross</td>
+               </thead>
+         
+               {% for row in rows %}
+               <tr>
+                <td>{{row["rank"]}}</td>
+                <td>{{row["title"]}}</td>
+                <td>{{row["grossing"]}}</td>	
+               </tr>
+               {% endfor %}
+              </table>
+         </div>  
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>
+

@@ -3,7 +3,7 @@ import sqlite3
 
 from flask import Flask
 app = Flask ( __name__ )
-db_location = 'var/movies2001.db'
+db_location = 'var/.movies2001.db'
 
 def get_db () :
     db = getattr (g, 'db', None)
@@ -28,16 +28,16 @@ def init_db():
 @app.route("/")
 def root():
     db = get_db()
-    db.cursor().execute('insert into movies2001  values ("1", "Mission: Impossible 2", "$546,388,105")')
-    db.cursor().execute('insert into movies2001  values ("2", "Gladiator", "$457,640,427")')
-    db.cursor().execute('insert into movies2001  values ("3", "Cast Away", "$429,632,142")')
-    db.cursor().execute('insert into movies2001  values ("4", "What Women Want", "$374,111,707")')
-    db.cursor().execute('insert into movies2001  values ("5", "Dinosaur", "$349,822,765")')
-    db.cursor().execute('insert into movies2001  values ("6", "How The Grinch Stole Christmas", "$345,141,403")')
-    db.cursor().execute('insert into movies2001  values ("7", "Meet The Parents", "$330,444,045")')
-    db.cursor().execute('insert into movies2001  values ("8", "The Perfect Storm", "$328,718,434")')
-    db.cursor().execute('insert into movies2001  values ("9", "X-Men", "$296,339,527")')
-    db.cursor().execute('insert into movies2001  values ("10", "What Lies Beneath", "$291,420,351")')
+    db.cursor().execute('insert into movies2001  values ("1", "Harry Potter and The Philosophers Stone", "$974,755,371")')
+    db.cursor().execute('insert into movies2001  values ("2", "The Lord of the Rings: The Fellowship of the Ring", "$871,530,324")')
+    db.cursor().execute('insert into movies2001  values ("3", "Monsters, Inc", "$525,366,597")')
+    db.cursor().execute('insert into movies2001  values ("4", "Shrek", "$484,409,218")')
+    db.cursor().execute('insert into movies2001  values ("5", "Oceans Eleven", "$450,717,150")')
+    db.cursor().execute('insert into movies2001  values ("6", "Pearl Harbor", "$449,220,945")')
+    db.cursor().execute('insert into movies2001  values ("7", "The Mummy Returns", "$433,013,274")')
+    db.cursor().execute('insert into movies2001  values ("8", "Jurassic Park III", "$368,780,809")')
+    db.cursor().execute('insert into movies2001  values ("9", "Planet of the Apes", "$362,211,740")')
+    db.cursor().execute('insert into movies2001  values ("10", "Hannibal", "$351,692,268")')
     db.commit()
 
     page = []
