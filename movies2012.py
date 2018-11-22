@@ -33,7 +33,7 @@ def root():
     db.cursor().execute('insert into movies2012  values ("3", "The Dark Knight Rises", "$1,084,939,099")')
     db.cursor().execute('insert into movies2012  values ("4", "The Hobbit: An Unexpected Journey", "$1,021,103,568")')
     db.cursor().execute('insert into movies2012  values ("5", "Ice Age: Continental Drift", "$877,244,782")')
-    db.cursor().execute('insert into movies2012  values ("6", "The Twilight Saga: Breaking Dawn – Part 2", "$829,746,820")')
+    db.cursor().execute('insert into movies2012  values ("6", "The Twilight Saga: Breaking Down - Part 2", "$829,746,820")')
     db.cursor().execute('insert into movies2012  values ("7", "The Amazing Spider-Man", "$757,930,663")')
     db.cursor().execute('insert into movies2012  values ("8", "Madagascar 3: Europes Most Wanted", "$746,921,274")')
     db.cursor().execute('insert into movies2012  values ("9", "The Hunger Games", "$694,394,724")')

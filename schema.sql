@@ -120,3 +120,11 @@ CREATE TABLE movies2012 (
     grossing text
 );
 
+DROP TABLE if EXISTS movies2013;
+
+CREATE TABLE movies2013 (
+    rank int,
+    title text,
+    grossing text
+);
+

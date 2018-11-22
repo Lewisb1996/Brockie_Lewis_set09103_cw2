@@ -150,8 +150,19 @@ def movies2010():
    rows = cur.fetchall();
    return render_template("movies2010.html",rows = rows)
 
-@app.route('/movies2012')
+@app.route('/movies2011')
 def movies2011():
+   con = sql.connect("var/movies2011.db")
+   con.row_factory = sql.Row
+
+   cur = con.cursor()
+   cur.execute("select * from movies2011")
+
+   rows = cur.fetchall();
+   return render_template("movies2011.html",rows = rows)
+
+@app.route('/movies2012')
+def movies2012():
    con = sql.connect("var/movies2012.db")
    con.row_factory = sql.Row
 
@@ -160,6 +171,18 @@ def movies2011():
 
    rows = cur.fetchall();
    return render_template("movies2012.html",rows = rows)
+
+@app.route('/movies2013')
+def movies2013():
+   con = sql.connect("var/movies2013.db")
+   con.row_factory = sql.Row
+
+   cur = con.cursor()
+   cur.execute("select * from movies2013")
+
+   rows = cur.fetchall();
+   return render_template("movies2013.html",rows = rows)
+
 
 @app.route('/comingsoon/<string:name>')
 def comingsoon(name):
