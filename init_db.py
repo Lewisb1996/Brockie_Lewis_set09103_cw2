@@ -46,3 +46,17 @@ init_db ()
 from movies2013 import init_db
 init_db ()
 
+from movies2014 import init_db
+init_db ()
+
+from movies2015 import init_db
+init_db ()
+
+from movies2016 import init_db
+init_db ()
+
+from movies2017 import init_db
+init_db ()
+
+from movies2018 import init_db
+init_db ()

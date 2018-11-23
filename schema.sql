@@ -128,3 +128,43 @@ CREATE TABLE movies2013 (
     grossing text
 );
 
+DROP TABLE if EXISTS movies2014;
+
+CREATE TABLE movies2014 (
+    rank int,
+    title text,
+    grossing text
+);
+
+DROP TABLE if EXISTS movies2015;
+
+CREATE TABLE movies2015 (
+    rank int,
+    title text,
+    grossing text
+);
+
+DROP TABLE if EXISTS movies2016;
+
+CREATE TABLE movies2016 (
+    rank int,
+    title text,
+    grossing text
+);
+
+DROP TABLE if EXISTS movies2017;
+
+CREATE TABLE movies2017 (
+    rank int,
+    title text,
+    grossing text
+);
+
+DROP TABLE if EXISTS movies2018;
+
+CREATE TABLE movies2018 (
+    rank int,
+    title text,
+    grossing text
+);
+
