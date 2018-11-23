@@ -1,10 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, session, url_for
 import sqlite3 as sql
 
-app = Flask(__name__)
-
-@app.route('/')
-def root():
+@app.route('/home')
+def home():
     return render_template('base.html')
 
 @app.route('/highestgrossing')
@@ -239,7 +237,7 @@ def movies2018():
    return render_template("movies2018.html",rows = rows)
 
 
-@app.route('/comingsoon/<string:name>')
+@app.route('/<string:name>')
 def comingsoon(name):
     #return name
     return render_template(name+'.html')

@@ -35,12 +35,25 @@
 
         <div class="container">
              <h1>Register an Account</h1>
-             <form action="" name="form"  method="POST" enctype="multipart/form-data">             
-             <p class="center">Email Address:<input type="text" name="email" placeholder="Email"></textarea><br/></p>
-             <p class="center">Username:<input type="text" name="username" placeholder="Username"></textarea><br/></p>
-             <p class="center">Password:<input type="password" name="password" placeholder="Password"></textarea><br/></p>
-             <p class="center">Confirm Password:<input type="password" name="password2" placeholder="Password"></textarea><br/></p>
-             <p class="center"> <input type="submit" name="submit" id="submit"/></p><p class="center"></p>
+             <form action="" method="POST">             
+             <h2>Username</h2>
+             {% if errorusername %}
+                <p id="Error">{{ errorusername }}</p>
+             {% endif %}
+             <input type="text" plceholder="username" name="username" value="{{ request.form.username }}">
+             <h2>Password</h2>
+             {% if errorpassword %}
+                <p id="Error">{{ errorpassword }}</p>
+             {% endif %}
+             <input type="text" plceholder="password" name="password" value="{{ request.form.password }}">
+             <h2>Email</h2>
+             {% if erroremail %}
+                <p id="Error">{{ erroremail }}</p>
+             {% endif %}
+             <input type="text" plceholder="email" name="email" value="{{ request.form.email }}">
+             <input type="submit" value="Submit">
+             <p>{{ error[1] }}</p>
+             <p>{{ data }}</p>
              </form>
         </div>
 

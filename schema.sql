@@ -1,3 +1,12 @@
+DROP TABLE if EXISTS users;
+
+CREATE TABLE users (
+    username text,
+    password text,
+    email text
+);
+
+
 DROP TABLE if EXISTS highestgrossing;
 
 CREATE TABLE highestgrossing (

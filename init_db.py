@@ -1,3 +1,6 @@
+from login import init_db
+init_db ()
+
 from highestgrossing import init_db
 init_db ()
 

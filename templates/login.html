@@ -34,16 +34,26 @@
        </nav>
 
         <div class="container">
+
              <h1>Login</h1>
-             <p class="center">Username:<input type="text" name="username" placeholder="Username"></textarea><br/></p>
-             <p class="center">Password:<input type="password" name="password" placeholder="Password"></textarea><br/></p>
-             <p class="center"> <input type="login" name="login" id="login"/></p><p class="login"></p>
+             <form name="login_form" action="" method="post">
+             <input type="username" placeholder="username" name="username">
+             <input type ="password" placeholder="password" name="password">
+             <button type ="submit" class ="btn" name ="button" value ="login">
+                 Login
+             </button>
+             {% if suc %}
+             <script>
+             window.setTimeouut(function() {
+               window.location.href = "/home";
+               },2);
+             </script> 
+             {% endif %}
              </form>
         </div>
 
-        
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
         <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
 </body>
 </html>
