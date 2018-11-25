@@ -6,7 +6,6 @@ CREATE TABLE users (
     email text
 );
 
-
 DROP TABLE if EXISTS highestgrossing;
 
 CREATE TABLE highestgrossing (

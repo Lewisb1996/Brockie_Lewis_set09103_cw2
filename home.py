@@ -1,6 +1,7 @@
 import bcrypt
 from functools import wraps
 from flask import Flask, render_template, redirect, request, session, g, url_for
+import sqlite3 as sql
 import sqlite3
 
 app = Flask(__name__)
@@ -103,8 +104,8 @@ def register():
          db = get_db()
          db.cursor().execute("INSERT INTO users(username,password,email) VALUES (?,?)", (username, spwd))
          db.commit()
-         return redirect(url_for('register.html'))
-   return render_template('login.html')
+         return redirect(url_for('login.html'))
+   return render_template('register.html')
 
 
 @app.route("/login", methods=['GET', 'POST'])
@@ -124,7 +125,7 @@ def login():
          if (username == value[0] and value[1].encode('utf-8') == bcrypt.hashpw(password, value[1].encode('utf-8'))):
             session['logged_in'] = True
             session['user'] = username
-            return redirect(url_for('base.html'))
+            return redirect(url_for('login.html'))
    return render_template('base.html')
 
 
