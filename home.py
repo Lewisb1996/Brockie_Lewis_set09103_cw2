@@ -6,7 +6,6 @@ import sqlite3
 app = Flask(__name__)
 db_location = 'var/.users.db'
 
-
 def get_db():
    db = getattr(g, 'db', None)
    if db is None:
@@ -82,7 +81,7 @@ def root():
 def register():
    if request.method == 'POST':
       username = request.form['usrname-s']
-      password = request.form['psword-s']
+      password = request.form['pswrd-s']
       email = request.form['email-s']
            
       password = password.encode('utf-8')
@@ -100,12 +99,12 @@ def register():
          check = True
        
        
-      if(username is not None and password is not None and email is not None  is False):
+      if(username is not None and password is not None and email is not None is False):
          db = get_db()
          db.cursor().execute("INSERT INTO users(username,password,email) VALUES (?,?)", (username, spwd))
          db.commit()
-         return redirect(url_for('login.htm;'))
-   return render_template('register.html')
+         return redirect(url_for('register.html'))
+   return render_template('login.html')
 
 
 @app.route("/login", methods=['GET', 'POST'])
@@ -113,7 +112,7 @@ def login():
    if request.method == 'POST':
       
       username = request.form['usrname-l']
-      password = request.form['psword-l']
+      password = request.form['psword-1']
       
       db = get_db()
       data = db.cursor().execute("SELECT username, password FROM users WHERE username = '"+username+"'") 
@@ -126,7 +125,7 @@ def login():
             session['logged_in'] = True
             session['user'] = username
             return redirect(url_for('base.html'))
-         return render_template('base.html')
+   return render_template('base.html')
 
 
 @app.route('/Send', methods=['GET', 'POST'])
