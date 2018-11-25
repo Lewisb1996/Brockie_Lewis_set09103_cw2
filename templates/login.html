@@ -36,20 +36,31 @@
         <div class="container">
 
              <h1>Login</h1>
-             <form name="login_form" action="" method="post">
-             <input type="username" placeholder="username" name="username">
-             <input type ="password" placeholder="password" name="password">
-             <button type ="submit" class ="btn" name ="button" value ="login">
-                 Login
-             </button>
-             {% if suc %}
+             <form class="modal-content" action="/login" method="POST"> 
+             <label for="usrname-l"><b>Username</b></label>
+             <input type="username" placeholder="Username" name="usrname-l" required>
+             <label for="psword-l"><b>Password</b></label>
+             <input type="password" value="" name="psword-1" id="psword-l">
              <script>
-             window.setTimeouut(function() {
-               window.location.href = "/home";
-               },2);
-             </script> 
-             {% endif %}
-             </form>
+              function loginFunction()
+              {
+                 var x = document.getElementById("psword-1");
+                     if (x.type === "password")
+                       {
+                         x.type = "text";
+                       } 
+                     else
+                       {
+                         x.type = "password";
+                       }                  
+              }             
+            </script> 
+ 
+            <div class="clear">
+            <button type="submit" class="loginbtn">Login</button>
+            </div>
+
+            </form>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

@@ -35,26 +35,33 @@
 
         <div class="container">
              <h1>Register an Account</h1>
-             <form action="" method="POST">             
-             <h2>Username</h2>
-             {% if errorusername %}
-                <p id="Error">{{ errorusername }}</p>
-             {% endif %}
-             <input type="text" plceholder="username" name="username" value="{{ request.form.username }}">
-             <h2>Password</h2>
-             {% if errorpassword %}
-                <p id="Error">{{ errorpassword }}</p>
-             {% endif %}
-             <input type="text" plceholder="password" name="password" value="{{ request.form.password }}">
-             <h2>Email</h2>
-             {% if erroremail %}
-                <p id="Error">{{ erroremail }}</p>
-             {% endif %}
-             <input type="text" plceholder="email" name="email" value="{{ request.form.email }}">
-             <input type="submit" value="Submit">
-             <p>{{ error[1] }}</p>
-             <p>{{ data }}</p>
-             </form>
+             <form class="modal-content" action="/register" method="POST">           
+             <label for="usrname-s"><b>Username</b></label>
+             <input type="username" placeholder="Username" name="usrname-s" required>
+             <label for="pswrd-s"><b>Password</b></label>
+             <input type="password" value="" name="pswrd-s" id="pswrd-s">
+             <label for="email-s"><b>E-Mail Address</b></label>
+             <input type="email" placeholder="Email"  name="email-s">
+             
+             <script>
+              function registerFunction()
+              {
+                 var x = document.getElementById("psword-s");
+                     if (x.type === "password")
+                       {
+                         x.type = "text";
+                       }
+                     else
+                       {
+                         x.type = "password";
+                       }
+              }
+            </script>
+            
+            <div class="clear">
+            <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+            </form>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
